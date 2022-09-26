@@ -1,0 +1,601 @@
+:root {
+    --background: #cfdbff;
+    --border: #9a98f0;
+    --boxShadow: 5px 5px 10px #aeb8d6, 5px 5px 10px #f0feff;
+    --bodyTextColor: black;
+    --dotColor: rgb(203, 204, 248);
+    --scrollBar: #b8c8f9;
+    --scrollBarThumb: #90abfd;
+
+}
+
+.dark-theme {
+    /* --background: #131419; */
+    --background: #141b3a;
+    --boxShadow: 8px 8px 16px #08080a, 8px 8px 16px #1e2028;
+    --bodyTextColor: white;
+    --border: rgb(2 38 76);
+    --dotColor: #0a2d95;
+    --scrollBar: #141b3a;
+    --scrollBarThumb: #1a2558;
+}
+
+* {
+    margin: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    font-family: 'Bree Serif', serif;
+
+}
+
+::-webkit-scrollbar {
+    background-color: var(--scrollBar);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scrollBarThumb);
+}
+
+body {
+    background-color: var(--background);
+    color: var(--bodyTextColor);
+}
+
+section .recent,
+.right_part .box {
+    border-radius: 5px;
+}
+
+/* NAV SECTION START */
+
+nav {
+    display: flex;
+    background: var(--background);
+    box-shadow: var(--boxShadow);
+    justify-content: space-between;
+
+    height: 3rem;
+    align-items: center;
+}
+
+nav .menu {
+    display: flex;
+    padding-left: 5rem;
+}
+
+nav .menu .logout {
+    color: var(--bodyTextColor);
+}
+
+nav .menu .logout:hover {
+    color: white;
+}
+
+
+nav .name {
+    padding-top: 0.4rem;
+    left: 77px;
+    position: absolute;
+}
+
+nav .menu .icons img {
+    width: 1.4rem;
+    padding-bottom: rem;
+    position: relative;
+    color: black;
+}
+
+nav .menu1 {
+    position: fixed;
+    top: 1rem;
+    width: 249px;
+    height: 75%;
+    left: -250px;
+    border: 2px solid var(--border);
+    background: var(--background);
+    transition: all .5s ease;
+    top: 0.5rem;
+}
+
+nav h5 {
+    font-size: 22px;
+    text-align: center;
+    line-height: 70px;
+    border-bottom: 1px solid var(--border);
+    background: var(--background);
+    box-shadow: var(--boxShadow);
+}
+
+nav .menu1 ul a {
+    color: var(--bodyTextColor);
+    display: block;
+    height: 100%;
+    width: 100%;
+    font-size: 15px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    border: 1px solid var(--border);
+    border-bottom: 1px solid var(--background);
+    transition: .5s;
+    text-decoration: none;
+    line-height: 40px;
+}
+
+nav .menu1 ul a:hover {
+    background-color: #0a2d95;
+    transition: all .5s ease;
+    transition: .5s;
+    color: white;
+}
+
+nav .menu1 ul {
+    padding-left: inherit;
+}
+
+
+nav .menu1 ul a i {
+    margin-right: 16px;
+}
+
+#check {
+    display: none;
+}
+
+nav label #btn,
+label #cancel {
+    position: absolute;
+    cursor: pointer;
+    background-color: #042331;
+    border-radius: 3px;
+}
+
+nav label #btn {
+    background: var(--background);
+    border: 2px solid var(--border);
+    /* width: 3.2vw; */
+    border-radius: 3px;
+    left: 13px;
+    top: 5px;
+    line-height: 21px;
+    text-align: center;
+    font-size: 19px;
+    padding: 6px 12px;
+    transition: all .5s;
+}
+
+nav label #btn:hover {
+    background-color: #0a2d95;
+    transition: .5s;
+    color: white;
+}
+
+nav label #cancel {
+    left: -195px;
+    top: 17px;
+    padding: 4px 9px;
+    font-size: 30px;
+    transition: all .5s ease;
+    background: var(--background);
+    border: 2px solid var(--border);
+    width: 2.2rem;
+    height: 5vh;
+    line-height: 22px;
+    font-size: 15px;
+    border-radius: 3px;
+    top: 1rem;
+    text-align: center;
+}
+
+nav label #cancel:hover {
+    background-color: #0a2d95;
+    transition: .5s;
+    color: white;
+}
+
+nav #check:checked~.menu1 {
+    left: 0;
+    z-index: 11;
+}
+
+nav #check:checked~label #btn {
+    left: 250px;
+    pointer-events: none;
+    opacity: 0;
+}
+
+nav #check:checked~label #cancel {
+    left: 192px;
+    top: 1.6rem;
+    z-index: 100;
+    height: 35px;
+}
+
+nav .m1 {
+    background: var(--background);
+    border: 2px solid var(--border);
+    padding: 6px 13px;
+    border-radius: 3px;
+    text-align: center;
+    padding-top: 0.5rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+nav .m1:hover {
+    background-color: #0a2d95;
+    transition: .5s;
+    color: white;
+}
+
+nav .menu .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    padding: 18px 10px;
+}
+
+/* NAV SECTION END */
+section .content {
+    display: flex;
+}
+
+section {
+    margin: 0rem 0.7rem;
+}
+
+.customise {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1rem;
+}
+
+.customise span {
+    border: 2px solid var(--border);
+    margin: 1rem;
+    padding: 0.4rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    background: var(--background);
+    box-shadow: var(--boxShadow);
+}
+
+.customise span:hover {
+    background: #0a2d95;
+    color: white;
+    transition: .5s;
+}
+
+section .right_part {
+    width: 34vw;
+    display: flex;
+    flex-direction: column;
+    background: var(--background);
+}
+
+section .right_part .box {
+    border: 2px solid var(--border);
+    width: 22vw;
+    background: var(--background);
+    box-shadow: var(--boxShadow);
+}
+
+section .left_part {
+    width: 74vw;
+    height: auto;
+    display: flex;
+    padding-bottom: 1rem;
+    flex-direction: column;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid var(--border);
+    background: var(--background);
+    box-shadow: var(--boxShadow);
+}
+
+.left {
+    width: 115vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.left_part .overview,
+.box1 .overview,
+.box2 .overview,
+.box3 .overview,
+.box4 .overview,
+.box6 .overview {
+    margin: 1rem;
+}
+
+section .heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+section .heading .view {
+    padding: .6rem 0.3rem;
+    margin: 0 1rem;
+    border: 2px solid var(--border);
+    border-radius: 0.3rem;
+    cursor: pointer;
+    background: var(--background);
+    box-shadow: var(--boxShadow);
+}
+
+section .heading .view:hover {
+    background: #0a2d95;
+    color: white;
+    transition: .5s;
+}
+
+section .card_names {
+    display: flex;
+}
+
+section .subjects {
+    display: flex;
+    margin: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+section .subjects .link a {
+    color: var(--bodyTextColor);
+    text-decoration: none;
+}
+
+section .subjects .link a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+section .subject1 {
+    width: 17vw;
+    height: auto;
+    border: 2px solid var(--border);
+    border-radius: 0.3rem;
+    cursor: pointer;
+    background: var(--background);
+    box-shadow: var(--boxShadow);
+    overflow: hidden;
+}
+
+section .left_part .Rsubjects {
+    justify-content: center;
+}
+
+section .subject1 .cls {
+    height: 17vh;
+    overflow: hidden;
+}
+
+section .subject1 .cls img {
+    object-fit: contain;
+}
+
+section .subject1 .subpart1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: .7rem;
+    gap: .5rem;
+    align-items: center;
+}
+
+section .subpart1 span {
+    color: gray;
+}
+
+
+.subject1 .bar {
+    width: 14.8vw;
+    height: 1vh;
+    margin-top: 1.5rem;
+    margin-left: 0.6rem;
+    border: 2px solid var(--border);
+}
+
+.subject1 .complete {
+    font-size: .8rem;
+    margin-left: .7rem;
+    margin-bottom: 1rem;
+}
+
+.subject1 .dot {
+    border-radius: 2rem;
+    height: 2rem;
+    text-align: center;
+    padding-top: 0.5rem;
+    width: 2rem;
+}
+
+.subpart1 .dot:hover {
+    color: var(--bodyTextColor);
+    background-color: var(--dotColor);
+    transition: .5s;
+}
+
+section .right_part .times {
+    display: flex;
+    justify-content: space-between;
+}
+
+section .right_part .time:hover {
+    background-color: #0a2d95;
+    transition: .5s;
+    color: white;
+}
+
+section .right_part .time {
+    padding: 0.5rem 1.3rem;
+    margin: 0 1rem;
+    border: 2px solid var(--border);
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+section .right_part .bottom {
+    padding: 0.5rem 1.6rem;
+}
+
+section .right_part .box1 {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+section .box1 .line {
+    border-bottom: 1px solid var(--border);
+    width: 19.9vw;
+    margin: 0 auto;
+    margin: 1rem;
+}
+
+section .box1 .activity img {
+    object-fit: contain;
+    width: 4vw;
+    margin: 1rem 0;
+}
+
+section .box1 .activity {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section .box1 .act {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+section .box2 .files {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 1rem;
+}
+
+section .right_part .box2 {
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+section .right_part .box2 .manage {
+    margin-bottom: 1rem;
+}
+
+section .right_part .files a {
+    color: #0040ff;
+    text-decoration: none;
+}
+
+section .right_part .files a:hover {
+    text-decoration: underline;
+    transition: .5s;
+}
+
+section .right_part .box3 {
+    height: auto;
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+}
+
+section .right_part .box3 .online {
+    display: flex;
+    justify-content: center;
+}
+
+section .right_part .box3 .onlinePeoples {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.3rem 1.3rem;
+}
+
+section .right_part .box3 .onlinePeoples .names:hover {
+    text-decoration: underline;
+
+}
+
+section .right_part .box3 .onlinePeoples .users {
+    padding-right: .4rem;
+}
+
+section .right_part .box3 .onlinePeoples .names {
+    cursor: pointer;
+}
+
+section .right_part .box3 .users {
+    top: 0.2rem;
+    position: relative;
+    color: #0040ff;
+}
+
+section .box3 .logo_name {
+    overflow: hidden;
+}
+
+section .box3 .onlinePeoples .eye,
+.names {
+    color: #0040ff;
+}
+
+section .box3 .onlinePeoples .user {
+    color: gray;
+    font-size: 1.2rem;
+}
+
+section .right_part .box4 {
+    margin-bottom: 1rem;
+}
+
+section .box4 .display {
+    margin: 1rem;
+}
+
+section .box6 {
+    display: flex;
+    flex-direction: column;
+}
+
+section .box6 .events {
+    margin: 1rem;
+}
+
+section .right_part .box6 {
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+section .box6 a {
+    color: #0040ff;
+    text-decoration: none;
+}
+
+section .box6 a:hover {
+    text-decoration: underline;
+    transition: .5s;
+}
+
+footer {
+    width: 100vw;
+    height: 23vh;
+    border: 3px solid var(--border);
+    margin-top: 5rem;
+    background: var(--background);
+    box-shadow: var(--boxShadow);
+}
+
+footer .ft {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 8rem;
+    margin-bottom: 0;
+}
