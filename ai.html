@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arvo&family=Bree+Serif&family=Clicker+Script&family=Courgette&family=Libre+Baskerville:wght@700&family=Orelega+One&family=PT+Serif:ital,wght@1,700&family=Pacifico&family=Roboto+Slab:wght@600&family=Signika+Negative:wght@300&family=Yantramanav&display=swap"
+        rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/48a00b8081.js" crossorigin="anonymous"></script>
+    <title>Artificial Intelligence</title>
+    <link href="/style.css" rel="stylesheet">
+</head>
+<style>
+    nav{
+        box-shadow: var(--boxShadow);
+    }
+    #ej .boxes{
+        padding: 2rem;
+    }
+
+    #ej .box1, .box2{
+        margin-bottom: 1rem;
+    height: 18vh;
+    padding: 4rem 0 0 2rem;
+    border: 2px solid var(--border);
+    background: var(--background);
+    box-shadow: var(--boxShadow);
+    }
+    #ej .box1{
+        height: 25vh;
+    }
+    #ej .box1 span{
+        font-size: 2rem;
+
+    }
+    #ej .subp{
+        display: flex;
+    gap: 0.7rem;
+    }
+    #ej .subp a{
+        text-decoration: none;
+        color: blue;
+    }
+    #ej .subp a:hover{
+        text-decoration: underline;
+        transition: all 1s ease;
+    }
+    #ej .boxes .box2{
+        padding: 3rem;
+        padding: 3rem 8rem;
+    }
+    #ej .boxes .box2 a{
+        text-decoration: none;
+        color: var(--bodyTextColor);
+        font-size: 1.2rem;
+    }
+    #ej .boxes .box2 :hover{
+        text-decoration: underline;
+    }
+    footer{
+        position: fixed;
+        bottom: 0;
+    }
+</style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check">
+                <i class="fas fa-bars " id="btn"></i>
+                <i class="fas fa-times" id="cancel"></i>
+            </label>
+            <div class="menu1">
+                <h5>Menu</h5>
+                <ul>
+                    <li><a href="/dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+                    <li><a href=""> <i class="fa-solid fa-house"></i> Site Home</a></li>
+                    <li><a href=""><i class="fa-solid fa-calendar"></i> Calendar</a></li>
+                    <li><a href=""><i class="fa-solid fa-file"></i>Private Files</a></li>
+                    <li><a href=""> <i class="fa-solid fa-graduation-cap"></i> My Courses</a></li>
+                    <li><a href=""><i class="fa-solid fa-graduation-cap"></i> PUSIT501-22</a></li>
+                    <li><a href=""><i class="fa-solid fa-graduation-cap"></i> PUSIT502-22</a></li>
+                    <li><a href=""><i class="fa-solid fa-graduation-cap"></i> PUSIT503-22</a></li>
+                    <li><a href=""><i class="fa-solid fa-graduation-cap"></i> PUSIT504-22</a></li>
+                    <li><a href=""><i class="fa-solid fa-graduation-cap"></i> PUSIT505-22</a></li>
+                </ul>
+            </div>
+            <div class="menu">
+                <div class="name">Patkar Varde College</div>
+                <div class="m1"> <i class="fa-solid fa-bell"></i></div>
+                <div class="m1"> <i class="fa-solid fa-message"></i></div>
+                <div class="m1"><i class="fa-solid fa-circle-user"></i></div>
+                <div class="icons m1"> <img src="/pics/moon.png" alt="" id="icon"></div>
+                <div class="m1"> <a href="/"><i class="fa-solid fa-right-from-bracket logout"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section id="ej">
+        <div class="boxes">
+            <div class="box1"><span>Artificial Intelligence</span> 
+                <div class="subp">
+                    <div class="a"><a href="/dashboard.html"> Dashboard </a></div>
+                    <div class="a"><a href=""> / My Courses </a></div>
+                    <div class="a"><a href=""> / Miscellaneous </a></div>
+                    <div class="a"><a href=""> / B.Sc.IT </a></div>
+                    <div class="a"><a href=""> / Ty.B.Sc.IT </a></div>
+                    <div class="a"><a href=""> / Semister-V </a></div>
+                    <div class="a"><a href=""> / PUSIT501-22 </a></div>
+                </div>
+
+            </div>
+            <div class="box2"><a href="/generalnews1.html"><i class="fa-solid fa-scroll"></i>&nbsp; &nbsp;Announcements</a></div>
+        </div>
+    </section>
+
+    <footer>
+
+        <div class="ft">
+            <div>You are logged in as <a href="">770_Murlidhar Palav </a> <a href="">(Log Out)</a> </div>
+            <div><a href=""> Reset user tour on this page</a></div>
+            <div><a href=""> Home </a></div>
+            <div><a href=""> Data retention summary</a></div>
+        </div>
+    </footer>
+    <!-- JAVASCRIPT SECTION START -->
+    <script>
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function () {
+            document.body.classList.toggle("dark-theme");
+            if (document.body.classList.contains("dark-theme")) {
+                icon.src = "/static/pics/sun.png";
+            }
+            else {
+                icon.src = "/static/pics/moon.png";
+            }
+        }
+    </script>
+    <!-- JAVASCRIPT SECTION END -->
+
+</body>
+</html>

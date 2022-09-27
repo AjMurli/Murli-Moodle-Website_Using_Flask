@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="/style.css" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arvo&family=Bree+Serif&family=Clicker+Script&family=Courgette&family=Libre+Baskerville:wght@700&family=Orelega+One&family=PT+Serif:ital,wght@1,700&family=Pacifico&family=Roboto+Slab:wght@600&family=Signika+Negative:wght@300&family=Yantramanav&display=swap"
+        rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/48a00b8081.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="/pics/patkarC.jpg">
+    <style>
+        @media screen and (max-width: 816px) {
+
+            section .right_part .box1 {
+
+                width: 94vw;
+            }
+
+            section .right_part .box3 {
+                width: 94vw;
+            }
+
+            section .right_part .box2 {
+                width: 94vw;
+            }
+
+            section .right_part .box4 {
+                width: 94vw;
+            }
+
+            section .right_part .box5 {
+                width: 94vw;
+            }
+
+            section .right_part .box6 {
+                width: 94vw;
+            }
+
+            .customise span {
+                border: 2px solid var(--border);
+                margin: 1rem;
+                padding: 0.4rem;
+                border-radius: 0.2rem;
+                width: auto;
+                cursor: pointer;
+                background: var(--background);
+                box-shadow: var(--boxShadow);
+            }
+
+            section .right_part {
+                width: auto;
+                display: flex;
+                flex-direction: column;
+                background: var(--background);
+            }
+
+            section .content {
+                display: flex;
+                /* flex-wrap: nowrap; */
+                flex-wrap: wrap;
+            }
+
+            section .left_part {
+                height: auto;
+                width: auto;
+                display: flex;
+                padding-bottom: 1rem;
+                flex-direction: column;
+                margin-bottom: 1rem;
+                border: 2px solid var(--border);
+                background: var(--background);
+                box-shadow: var(--boxShadow);
+            }
+
+            section .subject1 {
+                height: auto;
+                width: auto;
+            }
+
+            section .heading {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            section .subjects {
+                justify-content: center;
+            }
+
+            section .right_part .box1 {
+                margin-bottom: 1rem;
+                /* display: flex; */
+                /* justify-content: center; */
+                /* align-items: center; */
+                margin-right: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            section .content {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            footer {
+                /* width: 100vw; */
+                /* height: 23vh; */
+                border: 3px solid var(--border);
+                margin-top: 5rem;
+                background: var(--background);
+                box-shadow: var(--boxShadow);
+            }
+
+            footer .ft {
+                display: flex;
+                flex-direction: column;
+                margin: 1rem 2rem;
+                margin-bottom: 0;
+            }
+
+            section {
+                margin-right: 0rem;
+                margin-left: 1rem;
+            }
+
+            section .subject1 .cls {
+                /* height: 17vh; */
+                overflow: hidden;
+            }
+
+            .subject1 .bar {
+                width: auto;
+                height: 1vh;
+                margin: 1.5rem 0.6rem;
+                border: 2px solid var(--border);
+            }
+        }
+
+        @media screen and (max-width: 504px) {
+            nav .m1 {
+                display: none;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check">
+                <i class="fas fa-bars " id="btn"></i>
+                <i class="fas fa-times" id="cancel"></i>
+            </label>
+            <div class="menu1">
+                <h5>Menu</h5>
+                <ul>
+                    <li><a href=""><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+                    <li><a href=""> <i class="fa-solid fa-house"></i> Site Home</a></li>
+                    <li><a href=""><i class="fa-solid fa-calendar"></i> Calendar</a></li>
+                    <li><a href=""><i class="fa-solid fa-file"></i>Private Files</a></li>
+                    <li><a href=""> <i class="fa-solid fa-graduation-cap"></i> My Courses</a></li>
+                    <li><a href=""><i class="fa-solid fa-graduation-cap"></i> PUSIT501-22</a></li>
+                    <li><a href=""><i class="fa-solid fa-graduation-cap"></i> PUSIT502-22</a></li>
+                    <li><a href=""><i class="fa-solid fa-graduation-cap"></i> PUSIT503-22</a></li>
+                    <li><a href=""><i class="fa-solid fa-graduation-cap"></i> PUSIT504-22</a></li>
+                    <li><a href=""><i class="fa-solid fa-graduation-cap"></i> PUSIT505-22</a></li>
+                </ul>
+            </div>
+            <div class="menu">
+                <div class="name">Patkar Varde College</div>
+                <div class="m1"> <i class="fa-solid fa-bell"></i></div>
+                <div class="m1"> <i class="fa-solid fa-message"></i></div>
+                <div class="m1"><i class="fa-solid fa-circle-user"></i></div>
+                <div class="icons m1"> <img src="/pics/moon.png" alt="" id="icon"></div>
+                <div class="m1"> <a href="/"><i class="fa-solid fa-right-from-bracket logout"></i></a>
+                </div>
+            </div>
+        </nav>
+        <div class="customise"><span>Customise This Page</span></div>
+    </header>
+
+    <section>
+        <div class="content">
+            <div class="left">
+                <div class="left_part  recent">
+                    <h1 class="overview">Recently accessed courses</h1>
+
+                    <div class="heading">
+                        <div class="view"><i class="fa-solid fa-filter"></i> &nbsp; All (Except removed from
+                            view)&nbsp;
+                            <i class="fa-solid fa-caret-down"></i>&nbsp;
+                        </div>
+                        <div class="card_names">
+                            <div class="view"><i class="fa-solid fa-arrow-down-short-wide"></i>&nbsp; Course
+                                Name&nbsp;
+                                <i class="fa-solid fa-caret-down"></i>&nbsp;
+                            </div>
+                            <div class="view"><i class="icon fa fa-th fa-fw"></i>&nbsp; Card&nbsp;&nbsp;</div>
+                        </div>
+                    </div>
+
+                    <div class="subjects Rsubjects">
+                        <div class="subject1">
+                            <div class="cls"> <img src="/pics/awp.png" alt="Advanced Web Programming"> </div>
+                            <div class="subpart1">
+                                <span>Semister-V</span>
+                                <span><i class="fa-solid fa-ellipsis dot"></i></span>
+                                <div class="link"><a href="/awp.html">Advanced Web Programming</a></div>
+                            </div>
+                            <div class="bar"></div>
+                            <div class="complete">0% complete</div>
+                        </div>
+
+                        <div class="subject1">
+                            <div class="cls"> <img src="/pics/ai.png" alt="Artificial Intellignece"> </div>
+                            <div class="subpart1">
+                                <span>Semister-V</span>
+                                <span><i class="fa-solid fa-ellipsis dot"></i></span>
+                                <div class="link"><a href="/ai.html">Artificial Intelligence</a></div>
+                            </div>
+                            <div class="bar"></div>
+                            <div class="complete">0% complete</div>
+                        </div>
+
+                        <div class="subject1">
+                            <div class="cls"> <img src="/pics/ej.png" alt="Enterprise Java"> </div>
+                            <div class="subpart1">
+                                <span>Semister-V</span>
+                                <span><i class="fa-solid fa-ellipsis dot"></i></span>
+                                <div class="link"><a href="/ej.html">Enterprise Java</a></div>
+                            </div>
+                            <div class="bar"></div>
+                            <div class="complete">0% complete</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="left_part recent">
+                    <h1 class="overview">Course Overview</h1>
+
+                    <div class="heading">
+                        <div class="view"><i class="fa-solid fa-filter"></i> &nbsp; All (Except removed from
+                            view)&nbsp;
+                            <i class="fa-solid fa-caret-down"></i>&nbsp;
+                        </div>
+                        <div class="card_names">
+                            <div class="view"><i class="fa-solid fa-arrow-down-short-wide"></i>&nbsp; Course
+                                Name&nbsp;
+                                <i class="fa-solid fa-caret-down"></i>&nbsp;
+                            </div>
+                            <div class="view"><i class="icon fa fa-th fa-fw"></i>&nbsp; Card&nbsp;&nbsp;</div>
+                        </div>
+                    </div>
+
+                    <div class="subjects">
+
+
+                        <div class="subject1">
+                            <div class="cls"> <img src="/pics/ai.png" alt="Artificial Intelligence"> </div>
+                            <div class="subpart1">
+                                <span>Semister-V</span>
+                                <span><i class="fa-solid fa-ellipsis dot"></i></span>
+                                <div class="link"><a href="/ai.html">Artificial Intelligence</a></div>
+                            </div>
+                            <div class="bar"></div>
+                            <div class="complete">0% complete</div>
+                        </div>
+
+                        <div class="subject1">
+                            <div class="cls"> <img src="/pics/ej.png" alt="Enterprise Java"> </div>
+                            <div class="subpart1">
+                                <span>Semister-V</span>
+                                <span><i class="fa-solid fa-ellipsis dot"></i></span>
+                                <div class="link"><a href="/ej.html">Enterprise Java</a></div>
+                            </div>
+                            <div class="bar"></div>
+                            <div class="complete">0% complete</div>
+                        </div>
+
+                        <div class="subject1">
+                            <div class="cls"> <img src="/pics/iot.png" alt="Internet Of Things"> </div>
+                            <div class="subpart1">
+                                <span>Semister-V</span>
+                                <span><i class="fa-solid fa-ellipsis dot"></i></span>
+                                <div class="link"><a href="/iot.html">Internet Of Things</a></div>
+                            </div>
+                            <div class="bar"></div>
+                            <div class="complete">0% complete</div>
+                        </div>
+
+                        <div class="subject1">
+                            <div class="cls"> <img src="/pics/awp.png" alt="Awanced Web Programming"> </div>
+                            <div class="subpart1">
+                                <span>Semister-V</span>
+                                <span><i class="fa-solid fa-ellipsis dot"></i></span>
+                                <div class="link"><a href="/awp.html">Advanced Web Programming</a></div>
+                            </div>
+                            <div class="bar"></div>
+                            <div class="complete">0% complete</div>
+                        </div>
+
+                        <div class="subject1">
+                            <div class="cls"> <img src="/pics/spm.png" alt="Software Project Management"> </div>
+                            <div class="subpart1">
+                                <span>Semister-V</span>
+                                <span><i class="fa-solid fa-ellipsis dot"></i></span>
+                                <div class="link"><a href="/spm.html">Software Project Management</a></div>
+                            </div>
+                            <div class="bar"></div>
+                            <div class="complete">0% complete</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right_part">
+                <div class="box box1">
+                    <h1 class="overview">TimeLine</h1>
+                    <div class="times">
+                        <div class="time watch"><i class="fa-solid fa-clock"></i> &nbsp;&nbsp;<i
+                                class="fa-solid fa-caret-down"></i></div>
+                        <div class="time bottom"><i class="fa-solid fa-arrow-down-short-wide"></i></div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="activity"><img src="/pics/activity.png" alt="activities"></div>
+                    <div class="act"><span>No upcoming activities due</span></div>
+                </div>
+
+                <div class="box box2">
+                    <h1 class="overview">Private Files</h1>
+                    <div class="files">
+                        <span>No Files Available</span>
+                        <span class="manage"><a href="">Manage Private Files...</a></span>
+                    </div>
+                </div>
+
+                <div class="box box3">
+                    <h1 class="overview">Online Users</h1>
+                    <span class="online">1 Online user</span>
+
+                    <div class="onlinePeoples">
+                        <div class="logo_name"><span class="users"><i class="fa-solid fa-circle-user user"></i>
+                            </span>
+                            <span class="names">770_Murlidhar Palav</span>
+                        </div>
+                        <div class="view_icon"><i class="fa-solid fa-eye users eye"></i></div>
+                    </div>
+
+                    <div class="onlinePeoples">
+                        <div class="logo_name"><span class="users"><i class="fa-solid fa-circle-user user"></i>
+                            </span>
+                            <span class="names">770_Murlidhar Palav
+                            </span>
+                        </div>
+                        <div class="view_icon"><i class="fa-solid fa-comment users"></i></div>
+                    </div>
+
+                    <div class="onlinePeoples">
+                        <div class="logo_name"><span class="users"><i class="fa-solid fa-circle-user user"></i>
+                            </span>
+                            <span class="names">770_Murlidhar Palav
+                            </span>
+                        </div>
+                        <div class="view_icon"><i class="fa-solid fa-comment users"></i></div>
+                    </div>
+
+                    <div class="onlinePeoples">
+                        <div class="logo_name"><span class="users"><i class="fa-solid fa-circle-user user"></i>
+                            </span>
+                            <span class="names">770_Murlidhar Palav
+                            </span>
+                        </div>
+                        <div class="view_icon"><i class="fa-solid fa-comment users"></i></div>
+                    </div>
+                    <div class="onlinePeoples">
+                        <div class="logo_name"><span class="users"><i class="fa-solid fa-circle-user user"></i>
+                            </span>
+                            <span class="names">770_Murlidhar Palav
+                            </span>
+                        </div>
+                        <div class="view_icon"><i class="fa-solid fa-comment users"></i></div>
+                    </div>
+
+                    <div class="onlinePeoples">
+                        <div class="logo_name"><span class="users"><i class="fa-solid fa-circle-user user"></i>
+                            </span>
+                            <span class="names">770_Murlidhar Palav</span>
+                        </div>
+                        <div class="view_icon"><i class="fa-solid fa-comment users"></i></div>
+                    </div>
+                </div>
+
+                <div class="box box4">
+                    <h1 class="overview"> Latest badges</h1>
+                    <div class="display"> <span>You have no badges to display</span></div>
+                </div>
+
+                <div class="box box6">
+                    <h1 class="overview"> UpComing Events</h1>
+                    <div class="events"><span>There are no upcoming events</span>
+                        <div> <a href="">Go to calendar...</a></div>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+    <footer>
+
+        <div class="ft">
+            <div>You are logged in as <a href="">770_Murlidhar Palav </a> <a href="">(Log Out)</a> </div>
+            <div><a href=""> Reset user tour on this page</a></div>
+            <div><a href=""> Home </a></div>
+            <div><a href=""> Data retention summary</a></div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT SECTION START -->
+    <script>
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function () {
+            document.body.classList.toggle("dark-theme");
+            if (document.body.classList.contains("dark-theme")) {
+                icon.src = "/static/pics/sun.png";
+            }
+            else {
+                icon.src = "/static/pics/moon.png";
+            }
+        }
+    </script>
+    <!-- JAVASCRIPT SECTION END -->
+
+</body>
+
+</html>
